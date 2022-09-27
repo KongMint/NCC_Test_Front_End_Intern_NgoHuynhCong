@@ -15,9 +15,26 @@
 </head>
 
 <body>
-    <div class="sidebar_res">
+    <div class="sidebar_container_res" id="myNav">
+        <div class="wrapper_res">
+            <div class="btnclose" id="btnClose">
+                <div class="line line_1"></div>
+                <div class="line line_2"></div>
+            </div>
+            <div class="sidebar_popup">
+                <div class="nav">Home</div>
+                <div class="nav">Services</div>
+                <div class="nav">News</div>
+                <div class="nav">Blog</div>
+                <div class="nav">Contact</div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar_res" id="btn_load">
         <div class="btn_sidebar">
-            lorem
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </div>
     <div class="container">
@@ -82,6 +99,18 @@
         </div>
     </div>
     <div class="copyright">Copyright © 2021</div>
+    <script>
+        let btn = document.getElementById("btn_load")
+        let sidebar = document.getElementById("myNav")
+        let close = document.getElementById("btnClose")
+        close.onclick = () => {
+            sidebar.classList.remove("display")
+        }
+        btn.onclick = () => {
+            sidebar.classList.toggle("display")
+        }
+
+    </script>
 </body>
 
 </html>

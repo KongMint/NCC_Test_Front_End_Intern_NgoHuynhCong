@@ -8,6 +8,7 @@
 .container{
     height: 100vh;
     display: flex;
+    z-index: 10;
 }
 
 .sidebar{
@@ -104,9 +105,11 @@ h1{
 }
 
 .sidebar_res{
-    z-index: 100;
-    position: relative;
-    background-color: red;
+    display: none;
+}
+
+.sidebar_container_res{
+    display: none;
 }
 
 
@@ -155,8 +158,90 @@ h1{
     }
     
 }
+.display{
+    display: block;
+}
 
 @media only screen and (max-width: 620px){
+    .sidebar_container_res{
+        color: white;
+        position: absolute;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        z-index: 101;
+    }
+
+    .sidebar_container_res .wrapper_res{
+        padding-top: 150px;
+    }
+
+    .sidebar_container_res .nav{
+        text-align: center;
+        border-top: 1px solid white;
+        padding: 25px 0;
+    }
+    .sidebar_container_res .wrapper_res{
+        position: relative;
+    }
+
+    .sidebar_container_res .btnclose{
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .btnclose{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 24px 5px;
+    }
+
+    .btnclose > .line{
+        height: 1px;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .btnclose > .line_1{
+        transform: rotate(45deg);
+    }
+
+    .btnclose > .line_2{
+        transform: rotate(-45deg);
+    }
+
+
+    .sidebar_res{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 100;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .btn_sidebar{
+        height: 25px;
+        padding: 0 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .sidebar_res .line{
+        height: 3px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+    }
     .copyright{
         margin-left: 0;
     }
